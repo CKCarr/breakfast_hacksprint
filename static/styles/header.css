@@ -1,0 +1,62 @@
+
+header {
+    margin-top: 0px; /* Adjust the margin value as needed */
+    width: 100%;
+    background-color: rgb(237, 236, 154);
+    background-image: radial-gradient(red , orange, yellow , white );
+    height: 240px;
+    border-bottom: 4px solid #ffa200;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+
+.header-margin {
+    height: 20px; /* Adjust the height of the margin */
+    background-color: rgb(251, 215, 15); /* Same as header background color */
+}
+
+.bg-dark.navbar-dark .navbar-brand {
+    color: rgb(230, 225, 124); 
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    display-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0px;
+    align-items: center;
+}
+
+
+header #api_status {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 55px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f8dcad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header #api_status:before {
+    content: "API";
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+#api_status.available {
+    background-color: #ffffff;
+}
