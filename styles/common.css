@@ -104,8 +104,8 @@ body {
     position: absolute;
     top: 38%; 
     left: 50%; 
-    width: 510px;
-    height: 520px;
+    width: 500px;
+    height: 500px;
     transform: translate(-50%, -50%); /* Use transform for centering */
     overflow: hidden;
     z-index: 2;
