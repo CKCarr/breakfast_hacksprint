@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Head -->
   <head>
-    <title>Breakfast For Fun</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap 4 CDN -->
+    <title>Breakfast For Fun</title>
+
+    <!-- Bootstrap 4 CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     />
+
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <!-- Bootstrap 4 JS and its Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- End Bootstrap 4 CDN -->
-    <!-- Include your own script (index.js) using Flask's url_for -->
-    <script src="static/scripts/index.js"></script>
 
+    <!-- Your CSS -->
     <!-- Custom CSS -->
     <!-- links to static/styles/css -->
     <link rel="stylesheet" type="text/css" href="static/styles/header.css" />
     <link rel="stylesheet" type="text/css" href="static/styles/common.css" />
     <link rel="stylesheet" type="text/css" href="static/styles/footer.css" />
+    <!-- Your JS -->
+    <script src="static/scripts/index.js"></script>
 
-    <style>
-      .fakeimg {
-        height: 200px;
-        background: #aaa;
-      }
-    </style>
-
-    <!-- End Custom CSS -->
+    <!-- Custom CSS -->
   </head>
-  <!-- End Head-->
 
-  <!-- Body -->
   <body>
-    <!-- incorporate status of api in header -->
-    <div class="header-margin"></div>
     <!-- Header Section -->
     <header>
-      <h1>Welcome to a Breakfast Adventure!</h1>
-      <div class="logo" id="grad1"></div>
+      <h1>Breakfast Bites && Bytes Arcade</h1>
+      <br />
+      <div>
+        <p></p>
+      </div>
+
+      <div class="logo"></div>
+      <!-- Emojis for fun -->
       <span style="font-size: 130px">&#x1F95E; </span>
       <!-- Pancake emoji -->
       <span style="font-size: 130px">&#x1F373;</span>
       <!-- Fried egg emoji -->
       <span style="font-size: 130px">&#129363;</span>
       <!-- Bacon emoji -->
+
+      <!-- incorporate status of api in header -->
       <div id="api_status" class="available"></div>
     </header>
     <!-- End Header -->
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav_bar">
       <a class="navbar-brand" href="index.html">HOME</a>
@@ -83,49 +86,44 @@
     </nav>
     <!-- End Navigation Bar -->
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="jumbotron text-center" style="margin-bottom: 0">
-        <h1>Breakfast Bites && Bytes</h1>
-        <p><b> Breakfast Recipes && Arcade Breaks </b></p>
+    <!-- Main Section -->
+    <!-- Arcade Content -->
+    <div class="arcade-container">
+      <div class="arcade-demo">
+        <h2>Breakfast Stacker</h2>
+        <div class="canvas-container">
+          <div class="game-container">
+            <img
+              src="static/images/screen.png"
+              alt="Game Screen"
+              class="game-screen"
+              class="img-fluid"
+            />
+            <div class="iframe-container">
+              <iframe
+                src="p5game.html"
+                class="game-iframe" 
+                class="img-fluid"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Main Section -->
+    <div>
+      <div class="game-instructions">
+        <div class="game-instructions-title">
+          <h2>Breakfast Stacker<br> 
+            Instructions</h2>
         <p>
-          A website that provides a variety of breakfast recipes and a
-          Pan-tastic arcade game!
+          Use the left and right arrow keys to move the plate.<br> Catch the falling
+          food to stack your breakfast.<br> If you miss, you lose!<br> 1 - point for
+          each food item caught. 10 - points for each 10 Breakfast Stacks. 10
+          Misses - Game Over!
         </p>
       </div>
-      <!-- Your website's content excluding footer -->
     </div>
-    <!--contact content-->
-    <div class="container">
-      <div class="contact1">
-        <h2>Crystal Carrillo</h2>
-        <h5>
-          <img
-            src="static/images/roses_test.jpg"
-            alt="Crystal Portrait"
-            width="150"
-          />
-        </h5>
-        <p>Attends Holberton Tulsa Cohort 20</p>
-        <a class="nav-link active" href="https://github.com/CKCarr">Github</a>
-      </div>
-
-      <div class="contact2">
-        <h2>Eve Baker</h2>
-        <h5>
-          <img
-            src="static/images/Eve.png"
-            alt="Eve Portrait"
-            width="150"
-          />
-        </h5>
-        <p>Attends Holberton Tulsa Cohort 20</p>
-        <a class="nav-link active" href="https://github.com/EveBaker">Github</a>
-        
-      </div>
-      <!--end div contact container-->
-    </div>
-
     <!-- Footer Section -->
     <footer>
       <div>
@@ -137,4 +135,3 @@
     <!-- End Footer Section -->
   </body>
 </html>
-
