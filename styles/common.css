@@ -139,3 +139,16 @@ body {
     justify-content: center
 }
 
+.image-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+  }
+
+  .image-container img {
+    max-width: 50%; /* Set the maximum width of the image */
+    margin-right: 20px; /* Add some space between the image and text */
+  }
+
+  .text {
+    flex: 1; /* Take up remaining space in the container */
+  }
