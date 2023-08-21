@@ -63,20 +63,31 @@ body {
     width: 50%;
 }
 
+.arcade_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    width: 160px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
 
 .arcade-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
 }
 
 .arcade-demo {
+    width: fit-content;
+    display: flex;
     text-align: center;
 }
 
 .canvas-container {
+    display: flex;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -102,10 +113,10 @@ body {
     color: #fff;
     display: flex;
     position: absolute;
-    top: 38%; 
+    top: %; 
     left: 50%; 
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 480px;
     transform: translate(-50%, -50%); /* Use transform for centering */
     overflow: hidden;
     z-index: 2;
