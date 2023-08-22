@@ -47,95 +47,115 @@ body {
 }
 
 
-
-
 .container {
     width: 100%;
 }
 
-.contact1 {
-    float: left;
-    width: 50%;
-}
+/* Contact Page Styling */
 
-.contact2 {
-    float: left;
-    width: 50%;
-}
-
-.arcade_img {
+.contact1{
     display: block;
     margin-left: auto;
-    margin-right: auto
-    width: 160px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-  }
+    width: 100%;
+    float: right;
+    width: 50%;
+}
 
 
+.contact2 {
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    float: left;
+    width: 50%;
+}
+
+
+
+/* Arcade Styling */
 .arcade-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100vh; /* You might want to adjust this depending on your page layout */
+    width: 100%; /* You might want to adjust this depending on your page layout */
+    height: 75vh; /* You might want to adjust this depending on your page layout */
+    padding: 20px;
 }
 
 .arcade-demo {
-    width: fit-content;
-    display: flex;
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .canvas-container {
-    display: flex;
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;  /* Adjust based on your preference */
+    height: 80vh; /* Adjust based on your preference */
+    padding-top: 45%;  /* Adjust based on the aspect ratio of your game */
+
 }
 
-.game-container {
-    display: flex;
-    position: relative;
+.game-screen, .iframe-container {
+    position: absolute;
+    object-fit: fill;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
 .game-screen {
+    z-index: 1;
+    object-fit: fill;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    object-fit: cover;
-    z-index: 1; /* Lower z-index to keep it behind the iframe */
+    
 }
+
 
 .iframe-container {
-    color: #fff;
-    display: flex;
-    position: absolute;
-    top: %; 
-    left: 50%; 
-    width: 480px;
-    height: 480px;
-    transform: translate(-50%, -50%); /* Use transform for centering */
-    overflow: hidden;
     z-index: 2;
-}
-
-.iframe-container iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    position: absolute;  /* This will overlay the iframe over the image */
+    top: 0;   /* Adjust as needed */
+    left: 0;  /* Adjust as needed */
     width: 100%;
-    height: 100%;
-    border: black 1px solid;
+    height: 60vh;
 }
 
 .game-iframe {
+    border: yellow 10px solid;
     display: flex;
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    border: none;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%;
+    height: 480px;;
+    position: relative;
+    top: 0;
+    left: 0;
+
 }
 
+..game-iframe {
+    
+}
+
+/** Styling for the game instructions */
 
 .game-instructions {
     margin-top: 0px; /* Adjust the margin value as needed */
@@ -150,16 +170,22 @@ body {
     justify-content: center
 }
 
-.image-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically align items */
-  }
 
-  .image-container img {
-    max-width: 50%; /* Set the maximum width of the image */
-    margin-right: 20px; /* Add some space between the image and text */
-  }
 
-  .text {
-    flex: 1; /* Take up remaining space in the container */
+/* Responsive Styling  for recipe.html*/
+#recipe-imgs img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio while resizing */
+    display: block; /* Remove inline whitespace */
+    margin-left: auto; /* Center images */
+    margin-right: auto; /* Center images */
+
+    }
+#recipe-list {
+    border: 8px solid #030394; /* Add a border around the container */
+    padding: 10px; /* Add some padding for spacing */
+    margin: 10px; /* Add some margin for spacing */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+
   }
