@@ -47,21 +47,30 @@ body {
 }
 
 
-
-
 .container {
     width: 100%;
 }
 
-.contact1 {
+/* Contact Page Styling */
+
+.contact1{
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    float: right;
+    width: 50%;
+}
+
+
+.contact2 {
+    display: block;
+    margin-left: auto;
+    width: 100%;
     float: left;
     width: 50%;
 }
 
-.contact2 {
-    float: left;
-    width: 50%;
-}
+
 
 /* General Styling */
 
@@ -97,11 +106,15 @@ body {
     position: relative;
     object-fit: cover;
     z-index: 1; /* Lower z-index to keep it behind the iframe */
+    margin: auto;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: #000;
+    margin-right: auto;
+
 }
 
-#screen-img {
-    display: flex;
-}
 
 .iframe-container {
     color: transparent;
@@ -120,6 +133,8 @@ body {
     width: 100%;
     height: 100%;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -136,3 +151,22 @@ body {
     justify-content: center
 }
 
+
+
+/* Responsive Styling  for recipe.html*/
+#recipe-imgs img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio while resizing */
+    display: block; /* Remove inline whitespace */
+    margin-left: auto; /* Center images */
+    margin-right: auto; /* Center images */
+
+    }
+#recipe-list {
+    border: 8px solid #030394; /* Add a border around the container */
+    padding: 10px; /* Add some padding for spacing */
+    margin: 10px; /* Add some margin for spacing */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+
+  }
