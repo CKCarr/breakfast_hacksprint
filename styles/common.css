@@ -72,71 +72,90 @@ body {
 
 
 
-/* General Styling */
-
+/* Arcade Styling */
 .arcade-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
-    width: 100vw;
+    height: 100vh; /* You might want to adjust this depending on your page layout */
+    width: 100%; /* You might want to adjust this depending on your page layout */
+    height: 75vh; /* You might want to adjust this depending on your page layout */
+    padding: 20px;
 }
 
 .arcade-demo {
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .canvas-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;  /* Adjust based on your preference */
+    height: 80vh; /* Adjust based on your preference */
+    padding-top: 45%;  /* Adjust based on the aspect ratio of your game */
+
 }
 
-.game-container {
-    display: flex;
-    position: relative;
+.game-screen, .iframe-container {
+    position: absolute;
+    object-fit: fill;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
 .game-screen {
+    z-index: 1;
+    object-fit: fill;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    object-fit: cover;
-    z-index: 1; /* Lower z-index to keep it behind the iframe */
-    margin: auto;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    background-color: #000;
-    margin-right: auto;
-
+    
 }
 
 
 .iframe-container {
-    color: transparent;
-    display: flex;
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    width: 500px;
-    height: 500px;
-    transform: translate(-50%, -50%); /* Use transform for centering */
-    overflow: hidden;
     z-index: 2;
-}
-
-.iframe-container iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    position: absolute;  /* This will overlay the iframe over the image */
+    top: 0;   /* Adjust as needed */
+    left: 0;  /* Adjust as needed */
     width: 100%;
-    height: 100%;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
+    height: 60vh;
 }
 
+.game-iframe {
+    border: yellow 10px solid;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%;
+    height: 480px;;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+..game-iframe {
+    
+}
+
+/** Styling for the game instructions */
 
 .game-instructions {
     margin-top: 0px; /* Adjust the margin value as needed */
