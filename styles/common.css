@@ -63,31 +63,21 @@ body {
     width: 50%;
 }
 
-.arcade_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-    width: 160px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-  }
-
+/* General Styling */
 
 .arcade-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
 }
 
 .arcade-demo {
-    width: fit-content;
-    display: flex;
     text-align: center;
 }
 
 .canvas-container {
-    display: flex;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -109,14 +99,18 @@ body {
     z-index: 1; /* Lower z-index to keep it behind the iframe */
 }
 
+#screen-img {
+    display: flex;
+}
+
 .iframe-container {
-    color: #fff;
+    color: transparent;
     display: flex;
     position: absolute;
-    top: %; 
-    left: 50%; 
-    width: 480px;
-    height: 480px;
+    top: 38%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
     transform: translate(-50%, -50%); /* Use transform for centering */
     overflow: hidden;
     z-index: 2;
@@ -125,14 +119,6 @@ body {
 .iframe-container iframe {
     width: 100%;
     height: 100%;
-    border: black 1px solid;
-}
-
-.game-iframe {
-    display: flex;
-    position: absolute;
-    width: 110%;
-    height: 110%;
     border: none;
 }
 
